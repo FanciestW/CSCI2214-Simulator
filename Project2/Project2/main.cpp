@@ -6,10 +6,8 @@
 //  Copyright © 2017 William Lin. All rights reserved.
 //
 
-#include "tools.hpp"
+#include "Simulator.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    Simulator sim("input.txt");
 }

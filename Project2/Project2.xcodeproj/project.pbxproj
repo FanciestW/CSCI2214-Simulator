@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D1AEAFAA1EA003B6006C9F92 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1AEAFA91EA003B6006C9F92 /* main.cpp */; };
 		D1AEAFB21EA0079F006C9F92 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1AEAFB01EA0079F006C9F92 /* tools.cpp */; };
+		D1FFDFA01EA941F700598189 /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1FFDF9E1EA941F700598189 /* Simulator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,9 @@
 		D1AEAFA91EA003B6006C9F92 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D1AEAFB01EA0079F006C9F92 /* tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
 		D1AEAFB11EA0079F006C9F92 /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tools.hpp; sourceTree = "<group>"; };
+		D1FFDF9E1EA941F700598189 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
+		D1FFDF9F1EA941F700598189 /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Simulator.hpp; sourceTree = "<group>"; };
+		D1FFDFA11EA9447B00598189 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +64,12 @@
 		D1AEAFA81EA003B6006C9F92 /* Project2 */ = {
 			isa = PBXGroup;
 			children = (
+				D1FFDFA11EA9447B00598189 /* input.txt */,
 				D1AEAFB01EA0079F006C9F92 /* tools.cpp */,
 				D1AEAFB11EA0079F006C9F92 /* tools.hpp */,
 				D1AEAFA91EA003B6006C9F92 /* main.cpp */,
+				D1FFDF9E1EA941F700598189 /* Simulator.cpp */,
+				D1FFDF9F1EA941F700598189 /* Simulator.hpp */,
 			);
 			path = Project2;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 			files = (
 				D1AEAFAA1EA003B6006C9F92 /* main.cpp in Sources */,
 				D1AEAFB21EA0079F006C9F92 /* tools.cpp in Sources */,
+				D1FFDFA01EA941F700598189 /* Simulator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +262,7 @@
 				D1AEAFAF1EA003B6006C9F92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
