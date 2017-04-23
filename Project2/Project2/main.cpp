@@ -10,4 +10,5 @@
 
 int main(int argc, const char * argv[]) {
     Simulator sim("input.txt");
+    sim.printState();
 }
