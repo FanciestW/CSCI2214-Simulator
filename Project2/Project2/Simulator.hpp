@@ -9,13 +9,14 @@
 #ifndef Simulator_hpp
 #define Simulator_hpp
 
-#include "tools.hpp"
+#include "MainMemory.hpp"
 
 class Simulator{
 private:
-    vector<unsigned int> ir;
+    MainMemory mem;
     int registers[32] = {};
     int pc = 0;
+    int ir = 0;
     int mdr = 0;
     int mar = 0;
     int a = 0;
@@ -30,9 +31,11 @@ private:
     
 public:
     ~Simulator() = default;
-    Simulator(string);
+    Simulator(){}
     void run();
-    void printState();
+    void loadCode(string file){ mem.loadProgramCode(file); }
+    void printStateHex();
+    void printStateDec();
     
 };
 

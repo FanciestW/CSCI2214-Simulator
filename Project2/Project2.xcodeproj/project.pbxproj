@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D13C01111EAFD64E0052D051 /* MainMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D13C010F1EAFD64E0052D051 /* MainMemory.cpp */; };
 		D1AEAFAA1EA003B6006C9F92 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1AEAFA91EA003B6006C9F92 /* main.cpp */; };
 		D1AEAFB21EA0079F006C9F92 /* tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1AEAFB01EA0079F006C9F92 /* tools.cpp */; };
 		D1FFDFA01EA941F700598189 /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1FFDF9E1EA941F700598189 /* Simulator.cpp */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D13C010F1EAFD64E0052D051 /* MainMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMemory.cpp; sourceTree = "<group>"; };
+		D13C01101EAFD64E0052D051 /* MainMemory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainMemory.hpp; sourceTree = "<group>"; };
 		D1AEAFA61EA003B6006C9F92 /* Project2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Project2; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AEAFA91EA003B6006C9F92 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D1AEAFB01EA0079F006C9F92 /* tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				D1AEAFA91EA003B6006C9F92 /* main.cpp */,
 				D1FFDF9E1EA941F700598189 /* Simulator.cpp */,
 				D1FFDF9F1EA941F700598189 /* Simulator.hpp */,
+				D13C010F1EAFD64E0052D051 /* MainMemory.cpp */,
+				D13C01101EAFD64E0052D051 /* MainMemory.hpp */,
 			);
 			path = Project2;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1AEAFAA1EA003B6006C9F92 /* main.cpp in Sources */,
+				D13C01111EAFD64E0052D051 /* MainMemory.cpp in Sources */,
 				D1AEAFB21EA0079F006C9F92 /* tools.cpp in Sources */,
 				D1FFDFA01EA941F700598189 /* Simulator.cpp in Sources */,
 			);

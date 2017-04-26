@@ -9,6 +9,8 @@
 #include "Simulator.hpp"
 
 int main(int argc, const char * argv[]) {
-    Simulator sim("input.txt");
-    sim.printState();
+    Simulator sim;
+    sim.loadCode("input.txt");
+    sim.run();
+    sim.printStateHex();
 }
