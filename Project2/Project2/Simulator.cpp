@@ -11,6 +11,39 @@
 void Simulator::run(){
     //TODO::Start to create the simulation
     
+void Simulator::runRtype(){
+    //Step 3:
+    setAoe(1);
+    setBoe(1);
+    setS2op(0);
+    switch(opcodeALU){
+        case 4: setALUop(8); break;
+        case 6: setALUop(10); break;
+        case 7: setALUop(12); break;
+        case 18: setALUop(21); break;
+        case 19: setALUop(25); break;
+        case 20: setALUop(27); break;
+        case 21: setALUop(23); break;
+        case 32: setALUop(0); break;
+        case 33: setALUop(28); break;
+        case 34: setALUop(1); break;
+        case 35: setALUop(29); break;
+        case 36: setALUop(4); break;
+        case 37: setALUop(5); break;
+        case 38: setALUop(6); break;
+        case 40: setALUop(16); break;
+        case 41: setALUop(18); break;
+        case 42: setALUop(20); break;
+        case 43: setALUop(24); break;
+        case 44: setALUop(26); break;
+        case 45: setALUop(22); break;
+        default: fatal("Bad opcodeALU"); break;
+    }
+    setCload(1);
+    //Step 4:
+    setREGselect(0);
+    setREGload(1);
+}
 }
 
 //Print to console the state of Simulator in Hex
