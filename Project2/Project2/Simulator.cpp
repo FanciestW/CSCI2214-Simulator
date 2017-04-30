@@ -10,7 +10,33 @@
 
 void Simulator::run(){
     //TODO::Start to create the simulation
-    
+    step1();
+    step2();
+    switch(getInstrType(opcode)){
+        case 0: runRtype(); break; //Handles All R types;
+        case 1: runJtype(); break;
+        case 2:
+            //runItypeJ()
+            break;
+        case 3:
+            //branch steps
+            break;
+        case 4:
+            //Itype ALU
+            break;
+        case 5:
+            //load
+            break;
+        case 6:
+            //store
+            break;
+        default:
+            fatal("Bad opcode");
+            break;
+    }
+    printStateHex();
+}
+
 void Simulator::step1(){
     setPCMARselect(0);
     readMem(1, 0);
