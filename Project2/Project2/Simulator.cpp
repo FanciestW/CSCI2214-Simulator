@@ -79,6 +79,20 @@ void Simulator::setPCMARselect(bool pcmar){
     if(PCMARselect) addr = mar;
     else addr = pc;
 }
+
+void Simulator::setIRload(bool load){
+    if(load){
+        ir = data;
+        rd = (ir & 0x0000F800) >> 11;
+        rs1 = (ir & 0x03E00000) >> 21;
+        rs2 = (ir & 0x001F0000) >> 16;
+        imm = (ir & 0x0000FFFF);
+        offset = (ir & 0x03FFFFFF);
+        opcode = ir >> 26;
+        opcodeALU = ir & 0x000007FF;
+    }
+}
+
 void Simulator::setS2op(int op){
     //TODO::Test if s2op works
     switch(op){
