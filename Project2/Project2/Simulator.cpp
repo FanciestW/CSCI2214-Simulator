@@ -56,6 +56,27 @@ void Simulator::runRtype(){
     setREGselect(0);
     setREGload(1);
 }
+void Simulator::setS2op(int op){
+    //TODO::Test if s2op works
+    switch(op){
+        case 1:
+            if((s2 & 0x00000080) == 128) s2 = s2 | 0xFFFFFF00;
+            else s2 = s2 | 0x00000000;
+            break;
+        case 3:
+            if((s2 & 0x00008000) == 32768) s2 = s2 | 0xFFFF0000;
+            else s2 = s2 | 0x00000000;
+            break;
+        case 5:
+            if((s2 & 0x02000000) == 33554432) s2 = s2 | 0xFC000000;
+            else s2 = s2 | 0x00000000;
+            break;
+        case 6: s2 = (unsigned)16; break;
+        case 7: s2 = (unsigned)4; break;
+        default: break;
+    }
+    S2op = op;
+}
 }
 
 //Print to console the state of Simulator in Hex
