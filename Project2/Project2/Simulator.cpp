@@ -62,6 +62,18 @@ void Simulator::runRtype(){
     setREGselect(0);
     setREGload(1);
 }
+
+void Simulator::runJtype(){
+    //Step 3:
+    b = offset;
+    setBoe(1);
+    setPCoeS1(1);
+    setALUop(0);
+    //Step 4:
+    setPCoeS1(1);
+    setS2op(5);
+}
+
 void Simulator::setPCMARselect(bool pcmar){
     PCMARselect = pcmar;
     if(PCMARselect) addr = mar;
