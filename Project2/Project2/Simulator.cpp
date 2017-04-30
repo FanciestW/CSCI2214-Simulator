@@ -11,6 +11,18 @@
 void Simulator::run(){
     //TODO::Start to create the simulation
     
+void Simulator::step2(){
+    setPCoeS1(1);
+    setS2op(7);
+    setALUop(0);
+    setPCload(1);
+    //test code:
+    registers[2] = 10;
+    registers[3] = 1;
+    setAload(1);
+    setBload(1);
+}
+
 void Simulator::runRtype(){
     //Step 3:
     setAoe(1);
