@@ -114,6 +114,35 @@ void Simulator::setS2op(int op){
     }
     S2op = op;
 }
+
+void Simulator::setALUop(int op){
+    switch(op){
+        case 0: dest = s1 + s2; break;
+        case 1: dest = s1 - s2; break;
+        case 2: dest = s1; break;
+        case 3: dest = s2; break;
+        case 4: dest = s1 & s2; break;
+        case 5: dest = s1 | s2; break;
+        case 6: dest = s1 ^ s2; break;
+        case 8: dest = s1  << (s2 % 8); break;
+        case 10: dest = s1 >> (s2 % 8); break;
+        case 16: dest = (s1 == s2); break;
+        case 18: dest = (s1 != s2); break;
+        case 20: dest = (s1 < s2); break;
+        case 21: dest = (unsigned)(s1 < s2); break;
+        case 22: dest = (s1 >= s2); break;
+        case 23: dest = (unsigned)(s1 >= s2); break;
+        case 24: dest = (s1 > s2); break;
+        case 25: dest = (unsigned)(s1 > s2); break;
+        case 26: dest = (s1 <= s2); break;
+        case 27: dest = (unsigned)(s1 <= s2); break;
+        case 28: dest = (unsigned)(s1 + s2); break;
+        case 29: dest = (unsigned)(s1 - s2); break;
+        default: fatal("Bad ALUop"); break;
+    }
+    if(dest == 0) Zflag = true;
+}
+
 //Designate where DMX will store C
 void Simulator::setREGselect(int sel){
     switch(sel){
