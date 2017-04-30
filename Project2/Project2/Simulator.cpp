@@ -11,6 +11,12 @@
 void Simulator::run(){
     //TODO::Start to create the simulation
     
+void Simulator::step1(){
+    setPCMARselect(0);
+    readMem(1, 0);
+    setIRload(1);
+}
+
 void Simulator::step2(){
     setPCoeS1(1);
     setS2op(7);
