@@ -38,3 +38,15 @@ void Simulator::printStateDec(){
     printf("S1: %i S2: %i Dest: %i Addr: %i Data: %i\n", s1, s2, dest, addr, data);
     printf("Register Buffers:\nA: %i B: %i C: %i\n", a, b, c);
 }
+
+//return 0: Rtype; 1: J type; 2: Itype J 3: Branch; 4: Itype; 5: load; 6: store; -1: no such op
+int Simulator::getInstrType(int op){
+    if(op == 0) return 0;
+    else if(op == 2 || op == 3) return 1;
+    else if(op == 18 || op == 19) return 2;
+    else if(op == 4 || op == 5) return 3;
+    else if(op > 7 && op < 15) return 4;
+    else if(op ==15 || (op > 31 && op < 37)) return 5;
+    else if((op > 23 && op < 30) || (op > 39 && op < 57)) return 6;
+    else return -1;
+}
