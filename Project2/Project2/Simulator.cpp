@@ -56,6 +56,11 @@ void Simulator::runRtype(){
     setREGselect(0);
     setREGload(1);
 }
+void Simulator::setPCMARselect(bool pcmar){
+    PCMARselect = pcmar;
+    if(PCMARselect) addr = mar;
+    else addr = pc;
+}
 void Simulator::setS2op(int op){
     //TODO::Test if s2op works
     switch(op){
