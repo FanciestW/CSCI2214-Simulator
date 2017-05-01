@@ -13,7 +13,7 @@
 
 class MainMemory{
 private:
-    unsigned char memory[5000] = {};
+    unsigned char memory[6000] = {};
     
 public:
     ~MainMemory() = default;
