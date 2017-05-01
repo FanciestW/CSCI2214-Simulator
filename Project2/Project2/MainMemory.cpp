@@ -31,12 +31,12 @@ int MainMemory::readMemory(int addr, int W_H_B){
     switch(W_H_B){
         case 0:
             //word
-            for(int i = 0; i < 4; i++) toReturn |= memory[i] << 8 * abs(i - 3);
+            for(int i = 0; i < 4; i++) toReturn |= memory[addr + i] << 8 * abs(i - 3);
             break;
             
         case 1:
             //halfword
-            for(int i = 0; i < 2; i++) toReturn |= memory[i] << 8 * abs(i - 1);
+            for(int i = 0; i < 2; i++) toReturn |= memory[addr + i] << 8 * abs(i - 1);
             break;
             
         case 2:
