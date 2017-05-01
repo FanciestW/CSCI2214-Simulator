@@ -9,32 +9,37 @@
 #include "Simulator.hpp"
 
 void Simulator::run(){
-    //TODO::Start to create the simulation
-    step1();
-    step2();
-    switch(getInstrType(opcode)){
-        case 0: runRtype(); break; //Handles All R types;
-        case 1: runJtype(); break;
-        case 2:
-            //runItypeJ()
-            break;
-        case 3:
-            //branch steps
-            break;
-        case 4:
-            //Itype ALU
-            break;
-        case 5:
-            //load
-            break;
-        case 6:
-            //store
-            break;
-        default:
-            fatal("Bad opcode");
-            break;
+    //test code:
+    registers[2] = 10;
+    registers[3] = 1;
+    for(;;){
+        step1();
+        if(ir == 0) break;
+        step2();
+        switch(getInstrType(opcode)){
+            case 0: runRtype(); break; //Handles All R types;
+            case 1: runJtype(); break;
+            case 2:
+                //runItypeJ()
+                break;
+            case 3:
+                //branch steps
+                break;
+            case 4:
+                //Itype ALU
+                break;
+            case 5:
+                //load
+                break;
+            case 6:
+                //store
+                break;
+            default:
+                fatal("Bad opcode");
+                break;
+        }
+        printStateHex();
     }
-    printStateHex();
 }
 
 void Simulator::step1(){
