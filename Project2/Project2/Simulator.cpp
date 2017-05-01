@@ -53,9 +53,6 @@ void Simulator::step2(){
     setS2op(7);
     setALUop(0);
     setPCload(1);
-    //test code:
-    registers[2] = 10;
-    registers[3] = 1;
     setAload(1);
     setBload(1);
 }
