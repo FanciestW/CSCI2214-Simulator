@@ -28,9 +28,7 @@ void Simulator::run(){
             case 4:
                 //Itype ALU
                 break;
-            case 5:
-                //load
-                break;
+            case 5: runLoadInstr(); break;
             case 6:
                 //store
                 break;
@@ -99,6 +97,10 @@ void Simulator::runJtype(){
     setS2op(5);
     setALUop(0);
     setPCload(1);
+}
+
+void Simulator::runLoadInstr(){
+    //TODO::Add a write to Register and finish load instr
 }
 
 void Simulator::setPCMARselect(bool pcmar){
@@ -205,7 +207,7 @@ void Simulator::printStateDec(){
     printf("Register Buffers:\nA: %i B: %i C: %i\n", a, b, c);
 }
 
-//return 0: Rtype; 1: J type; 2: Itype J 3: Branch; 4: Itype; 5: load; 6: store; -1: no such op
+//return 0: Rtype; 1: J type; 2: Itype J 3: Branch; 4: Itype ALU; 5: load; 6: store; -1: no such op
 int Simulator::getInstrType(int op){
     if(op == 0) return 0;
     else if(op == 2 || op == 3) return 1;

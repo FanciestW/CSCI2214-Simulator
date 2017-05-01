@@ -78,6 +78,7 @@ private:
     void step2();
     void runRtype();
     void runJtype();
+    void runLoadInstr();
     
     
 public:
