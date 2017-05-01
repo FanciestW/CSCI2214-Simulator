@@ -101,6 +101,7 @@ void Simulator::runJtype(){
 
 void Simulator::runLoadInstr(){
     //TODO::Add a write to Register and finish load instr
+    
 }
 
 void Simulator::setPCMARselect(bool pcmar){
@@ -127,15 +128,15 @@ void Simulator::setS2op(int op){
     switch(op){
         case 1:
             if((s2 & 0x00000080) == 128) s2 = s2 | 0xFFFFFF00;
-            else s2 = s2 | 0x00000000;
+            else s2 = s2 & 0x000000FF;
             break;
         case 3:
             if((s2 & 0x00008000) == 32768) s2 = s2 | 0xFFFF0000;
-            else s2 = s2 | 0x00000000;
+            else s2 = s2 & 0x0000FFFF;
             break;
         case 5:
             if((s2 & 0x02000000) == 33554432) s2 = s2 | 0xFC000000;
-            else s2 = s2 | 0x00000000;
+            else s2 = s2 & 0x03FFFFFF;
             break;
         case 6: s2 = (unsigned)16; break;
         case 7: s2 = (unsigned)4; break;
