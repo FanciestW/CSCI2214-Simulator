@@ -99,10 +99,9 @@ void Simulator::runJtype(){
     b = offset;
     setBoe(1);
     setPCoeS1(1);
-    setALUop(0);
-    //Step 4:
-    setPCoeS1(1);
     setS2op(5);
+    setALUop(0);
+    setPCload(1);
 }
 
 void Simulator::setPCMARselect(bool pcmar){
