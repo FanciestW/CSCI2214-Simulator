@@ -73,16 +73,18 @@ private:
     void setREGload(bool load){ if(load) registers[DMX] = c; }
     void setREGselect(int);
     
+    //Running Simulator Functions
+    void step1();
+    void step2();
+    void runRtype();
+    void runJtype();
+    
     
 public:
     ~Simulator() = default;
     Simulator(){}
     void run();
     void loadCode(string file){ mem.loadProgramCode(file); }
-    void step1();
-    void step2();
-    void runRtype();
-    void runJtype();
     void printStateHex();
     void printStateDec();
     int getInstrType(int);
