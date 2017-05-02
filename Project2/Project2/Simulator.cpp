@@ -129,6 +129,14 @@ void Simulator::setPCMARselect(bool pcmar){
     else addr = pc;
 }
 
+void Simulator::readMem(bool read, int op){
+    if(read){
+        MemRead = 1;
+        data = mem.readMemory(addr, op);
+        mdrMux = data;
+    }
+}
+
 void Simulator::setIRload(bool load){
     if(load){
         ir = data;

@@ -20,6 +20,7 @@ private:
     int pc = 0;
     int ir = 0;
     int mdr = 0;
+    int mdrMux = 0;
     int mar = 0;
     int a = 0;
     int b = 0;
@@ -59,7 +60,7 @@ private:
     
     //Control Signal Functions
     void setPCMARselect(bool);
-    void readMem(bool read, int op){ if(read) data = mem.readMemory(addr, op); }
+    void readMem(bool, int);
     void setIRload(bool);
     void setPCoeS1(bool oe){ if(oe) s1 = pc; }
     void setS2op(int);
@@ -72,6 +73,11 @@ private:
     void setCload(bool load){ if(load) c = dest; }
     void setREGload(bool load){ if(load) registers[DMX] = c; }
     void setREGselect(int);
+    void setIRoeS1(bool oe){ if(oe) s1 = ir; }
+    void setIRoeS2(bool oe){ if(oe) s2 = ir; }
+    void setMARload(bool load){ if(load) mar = dest; }
+    void setMDRload(bool load){ if(load) mdr = mdrMux; }
+    void setMDRoeS2(bool oe){ if(oe) s2 = mdr; }
     
     //Running Simulator Functions
     void step1();
