@@ -101,8 +101,26 @@ void Simulator::runJtype(){
 }
 
 void Simulator::runLoadInstr(){
-    //TODO::Add a write to Register and finish load instr
-    
+    //TODO::Test Load Instr
+    //Step 3:
+    setAoe(1);
+    setIRoeS2(1);
+    setS2op(3);
+    setALUop(0);
+    setMARload(1);
+    setPCMARselect(1);
+    switch(opcode){
+        case 32: readMem(1, 2); break;
+        case 33: readMem(1, 1); break;
+        case 35: readMem(1, 0); break;
+    }
+    setMDRload(1);
+    setMDRoeS2(1);
+    setS2op(0);
+    setALUop(3);
+    setCload(1);
+    setREGselect(1);
+    setREGload(1);
 }
 
 void Simulator::setPCMARselect(bool pcmar){
