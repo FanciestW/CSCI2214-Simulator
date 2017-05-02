@@ -119,6 +119,10 @@ void Simulator::runLoadInstr(){
     setREGload(1);
 }
 
+void Simulator::runStoreInstr(){
+    //TODO::Code for store instructions
+}
+
 void Simulator::runItypeALU(){
     setAoe(1);
     setIRoeS2(1);
