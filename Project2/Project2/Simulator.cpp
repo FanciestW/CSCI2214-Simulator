@@ -9,10 +9,6 @@
 #include "Simulator.hpp"
 
 void Simulator::run(){
-    //FIXME::Test code, remove when not needed
-    registers[2] = 10;
-    registers[3] = 1;
-    //========================================
     for(;;){
         step1();
         if(ir == 0) break;
