@@ -11,7 +11,7 @@
 int MainMemory::loadProgramCode(string filename){
     ifstream input(filename);
     if(!input.is_open()) return 0;
-    for(int i = 0; i < 5000; i++){
+    for(int i = 0; i < 3000; i++){
         char x, y;
         input >> x >> y;
         if(input.eof()) break;
