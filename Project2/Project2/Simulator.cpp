@@ -53,7 +53,6 @@ void Simulator::step2(){
 }
 
 void Simulator::runRtype(){
-    //Step 3:
     setAoe(1);
     setBoe(1);
     setS2op(0);
@@ -81,13 +80,11 @@ void Simulator::runRtype(){
         default: fatal("Bad opcodeALU"); break;
     }
     setCload(1);
-    //Step 4:
     setREGselect(0);
     setREGload(1);
 }
 
 void Simulator::runJtype(){
-    //Step 3:
     b = offset;
     setBoe(1);
     setPCoeS1(1);
