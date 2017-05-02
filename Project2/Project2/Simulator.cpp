@@ -27,7 +27,7 @@ void Simulator::run(){
                 //branch steps
                 break;
             case 4:
-                //Itype ALU
+                runItypeALU() break;
                 break;
             case 5: runLoadInstr(); break;
             case 6:
@@ -118,6 +118,26 @@ void Simulator::runLoadInstr(){
     setMDRoeS2(1);
     setS2op(0);
     setALUop(3);
+    setCload(1);
+    setREGselect(1);
+    setREGload(1);
+}
+
+void Simulator::runItypeALU(){
+    setAoe(1);
+    setIRoeS2(1);
+    if(opcode == 9 && opcode == 11) setS2op(4);
+    else setS2op(3);
+    switch(opcode){
+        case 8: setALUop(0);
+        case 9: setALUop(0);
+        case 10: setALUop(1);
+        case 11: setALUop(1);
+        case 12: setALUop(4);
+        case 13: setALUop(5);
+        case 14: setALUop(6);
+        default: break;
+    }
     setCload(1);
     setREGselect(1);
     setREGload(1);

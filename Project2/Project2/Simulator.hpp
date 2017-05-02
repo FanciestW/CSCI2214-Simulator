@@ -85,6 +85,7 @@ private:
     void runRtype();
     void runJtype();
     void runLoadInstr();
+    void runItypeALU();
     
     
 public:
