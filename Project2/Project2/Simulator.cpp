@@ -219,9 +219,9 @@ void Simulator::setALUop(int op){
 //Designate where DMX will store C
 void Simulator::setREGselect(int sel){
     switch(sel){
-        case 0: DMX = rd; break;
-        case 1: DMX = rs1; break;
-        case 2: DMX = 31; break;
+        case 0: REGselect = 0; DMX = rd; break;
+        case 1: REGselect = 1; DMX = rs2; break;
+        case 2: REGselect = 2; DMX = 31; break;
     }
 }
 
