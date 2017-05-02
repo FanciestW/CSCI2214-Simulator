@@ -23,7 +23,7 @@ void Simulator::run(){
                 //branch steps
                 break;
             case 4:
-                runItypeALU() break;
+                runItypeALU(); break;
                 break;
             case 5: runLoadInstr(); break;
             case 6:
