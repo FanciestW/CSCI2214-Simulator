@@ -125,13 +125,13 @@ void Simulator::runItypeALU(){
     if(opcode == 9 && opcode == 11) setS2op(4);
     else setS2op(3);
     switch(opcode){
-        case 8: setALUop(0);
-        case 9: setALUop(0);
-        case 10: setALUop(1);
-        case 11: setALUop(1);
-        case 12: setALUop(4);
-        case 13: setALUop(5);
-        case 14: setALUop(6);
+        case 8: setALUop(0); break;
+        case 9: setALUop(0); break;
+        case 10: setALUop(1); break;
+        case 11: setALUop(1); break;
+        case 12: setALUop(4); break;
+        case 13: setALUop(5); break;
+        case 14: setALUop(6); break;
         default: break;
     }
     setCload(1);
