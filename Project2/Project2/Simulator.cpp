@@ -22,9 +22,7 @@ void Simulator::run(){
             case 3:
                 //branch steps
                 break;
-            case 4:
-                runItypeALU(); break;
-                break;
+            case 4: runItypeALU(); break;
             case 5: runLoadInstr(); break;
             case 6: runStoreInstr(); break;
             default: fatal("Bad opcode"); break;
@@ -113,7 +111,6 @@ void Simulator::runLoadInstr(){
 }
 
 void Simulator::runStoreInstr(){
-    //TODO::Test Store Instructions
     setAoe(1);
     setIRoeS2(1);
     setS2op(3);
