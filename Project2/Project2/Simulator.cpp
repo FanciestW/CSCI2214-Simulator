@@ -132,7 +132,7 @@ void Simulator::runStoreInstr(){
 }
 
 void Simulator::runItypeALU(){
-    setAoe(1); //FIXME::Shift to right adds 1s if signed number
+    setAoe(1);
     setIRoeS2(1);
     if(opcode == 9 && opcode == 11) setS2op(4);
     else setS2op(3);
@@ -218,8 +218,9 @@ void Simulator::setALUop(int op){
         case 4: dest = s1 & s2; break;
         case 5: dest = s1 | s2; break;
         case 6: dest = s1 ^ s2; break;
-        case 8: dest = s1  << s2; break;
-        case 10: dest = s1 >> s2; break;
+        case 8: dest = (unsigned)s1  << s2; break;
+        case 10: dest = (unsigned)s1 >> s2; break;
+        case 12: dest = s1 >> s2; break;
         case 16: dest = (s1 == s2); break;
         case 18: dest = (s1 != s2); break;
         case 20: dest = (s1 < s2); break;
