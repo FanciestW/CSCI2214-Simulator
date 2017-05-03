@@ -278,7 +278,7 @@ int Simulator::getInstrType(int op){
     else if(op == 2 || op == 3) return 1;
     else if(op == 18 || op == 19) return 2;
     else if(op == 4 || op == 5) return 3;
-    else if(op > 7 && op < 15) return 4;
+    else if((op > 7 && op < 15) || (op > 47 && op < 57)) return 4;
     else if(op ==15 || (op > 31 && op < 37)) return 5;
     else if((op > 23 && op < 30) || (op > 39 && op < 57)) return 6;
     else return -1;
