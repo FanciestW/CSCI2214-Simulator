@@ -20,7 +20,7 @@ public:
     MainMemory(){}
     int loadProgramCode(string);
     int readMemory(int, int);
-    int writeMemory(int, unsigned int, int);
+    int writeMemory(int, int, int);
 };
 
 #endif /* MainMemory_hpp */

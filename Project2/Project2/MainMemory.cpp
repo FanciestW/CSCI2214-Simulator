@@ -56,7 +56,7 @@ int MainMemory::readMemory(int addr, int W_H_B){
  int W_B_H is an int that will determine how much memory to write.
  return 1 if successful write 0 if unsuccessful, -1 if bad W_H_B.
  */
-int MainMemory::writeMemory(int addr, unsigned int data, int W_H_B){
+int MainMemory::writeMemory(int addr, int data, int W_H_B){
     unsigned int mask = 0xFF000000;
     switch(W_H_B){
         case 0:
