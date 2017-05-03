@@ -91,6 +91,7 @@ private:
     void runLoadInstr();
     void runStoreInstr();
     void runItypeALU();
+    void runBranchInstr();
     
     
 public:

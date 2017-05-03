@@ -20,7 +20,7 @@ void Simulator::run(){
                 //runItypeJ()
                 break;
             case 3:
-                //branch steps
+                runBranchInstr();
                 break;
             case 4: runItypeALU(); break;
             case 5: runLoadInstr(); break;
@@ -151,6 +151,22 @@ void Simulator::runItypeALU(){
     setCload(1);
     setREGselect(1);
     setREGload(1);
+}
+
+void Simulator::runBranchInstr(){
+    //TODO::Test Branch Instr
+    setAoe(1);
+    setBoe(1);
+    setS2op(0);
+    if(opcode == 4) setALUop(16);
+    else if(opcode == 5) setALUop(18);
+    if(!Zflag){
+        setPCoeS1(1);
+        setIRoeS2(1);
+        setS2op(3);
+        setALUop(0);
+        setPCload(1);
+    }
 }
 
 void Simulator::setPCMARselect(bool pcmar){
