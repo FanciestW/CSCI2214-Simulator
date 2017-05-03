@@ -166,7 +166,9 @@ void Simulator::readMem(bool read, int op){
     if(read){
         MemRead = 1;
         data = mem.readMemory(addr, op);
-        mdrMux = data;
+        setMemRead(1);
+    }
+}
     }
 }
 
