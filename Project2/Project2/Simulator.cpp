@@ -144,7 +144,9 @@ void Simulator::runItypeALU(){
         case 12: setALUop(4); break;
         case 13: setALUop(5); break;
         case 14: setALUop(6); break;
-        default: break;
+        case 54: setALUop(8); break;
+        case 55: setALUop(10); break;
+        default: fatal("Unsupported Itype ALU");
     }
     setCload(1);
     setREGselect(1);
