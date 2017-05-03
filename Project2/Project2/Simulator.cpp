@@ -156,11 +156,9 @@ void Simulator::runItypeALU(){
 void Simulator::runBranchInstr(){
     //TODO::Test Branch Instr
     setAoe(1);
-    setBoe(1);
     setS2op(0);
-    if(opcode == 4) setALUop(16);
-    else if(opcode == 5) setALUop(18);
-    if(!Zflag){
+    setALUop(2);
+    if((opcode == 4 && Zflag) || (opcode == 5 && !Zflag)){
         setPCoeS1(1);
         setIRoeS2(1);
         setS2op(3);
