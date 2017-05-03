@@ -27,9 +27,7 @@ void Simulator::run(){
                 break;
             case 5: runLoadInstr(); break;
             case 6: runStoreInstr(); break;
-            default:
-                fatal("Bad opcode");
-                break;
+            default: fatal("Bad opcode"); break;
         }
         printStateHex();
     }
