@@ -132,7 +132,7 @@ void Simulator::runStoreInstr(){
 }
 
 void Simulator::runItypeALU(){
-    setAoe(1);
+    setAoe(1); //FIXME::Shift to right adds 1s if signed number
     setIRoeS2(1);
     if(opcode == 9 && opcode == 11) setS2op(4);
     else setS2op(3);
