@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D1265DD21EB97936006AA643 /* test2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test2.txt; sourceTree = "<group>"; };
 		D13C010F1EAFD64E0052D051 /* MainMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMemory.cpp; sourceTree = "<group>"; };
 		D13C01101EAFD64E0052D051 /* MainMemory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MainMemory.hpp; sourceTree = "<group>"; };
 		D1AEAFA61EA003B6006C9F92 /* Project2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Project2; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +76,7 @@
 				D1FFDF9F1EA941F700598189 /* Simulator.hpp */,
 				D13C010F1EAFD64E0052D051 /* MainMemory.cpp */,
 				D13C01101EAFD64E0052D051 /* MainMemory.hpp */,
+				D1265DD21EB97936006AA643 /* test2.txt */,
 			);
 			path = Project2;
 			sourceTree = "<group>";
