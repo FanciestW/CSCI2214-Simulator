@@ -57,6 +57,7 @@ int MainMemory::readMemory(int addr, int W_H_B){
  return 1 if successful write 0 if unsuccessful, -1 if bad W_H_B.
  */
 int MainMemory::writeMemory(int addr, int data, int W_H_B){
+    addr += sizeof(memory)/2;
     unsigned int mask = 0xFF000000;
     switch(W_H_B){
         case 0:
