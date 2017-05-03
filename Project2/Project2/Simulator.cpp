@@ -95,7 +95,8 @@ void Simulator::runLoadInstr(){
     //TODO::Test Load Instr
     setAoe(1);
     setIRoeS2(1);
-    setS2op(3);
+    if(opcode == 36 || opcode == 37) setS2op(4);
+    else setS2op(3);
     setALUop(0);
     setMARload(1);
     setPCMARselect(1);
