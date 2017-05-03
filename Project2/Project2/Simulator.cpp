@@ -122,7 +122,7 @@ void Simulator::runStoreInstr(){
     setBoe(1);
     setS2op(0);
     setALUop(3);
-    setMemRead(1);
+    setMemReadDest(1);
     setMDRload(1);
     setPCMARselect(1);
     switch(opcode){

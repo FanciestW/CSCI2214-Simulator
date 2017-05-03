@@ -78,7 +78,8 @@ private:
     void setMARload(bool load){ if(load) mar = dest; }
     void setMDRload(bool load){ if(load) mdr = mdrMux; }
     void setMDRoeS2(bool oe){ if(oe) s2 = mdr; }
-    void setMemRead(bool read){ mdrMux = data; }
+    void setMemRead(bool read){ if(read) mdrMux = data; }
+    void setMemReadDest(bool read){ if(read) mdrMux = dest; }
     void setMemOP(int op){ MemOP = op; }
     void setMemWrite(bool);
     
