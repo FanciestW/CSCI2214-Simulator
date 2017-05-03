@@ -79,6 +79,8 @@ private:
     void setMDRload(bool load){ if(load) mdr = mdrMux; }
     void setMDRoeS2(bool oe){ if(oe) s2 = mdr; }
     void setMemRead(bool read){ mdrMux = data; }
+    void setMemOP(int op){ MemOP = op; }
+    void setMemWrite(bool);
     
     //Running Simulator Functions
     void step1();

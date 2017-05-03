@@ -169,6 +169,11 @@ void Simulator::readMem(bool read, int op){
         setMemRead(1);
     }
 }
+
+void Simulator::setMemWrite(bool write){
+    if(write){
+        data = mdr;
+        mem.writeMemory(addr, data, MemOP);
     }
 }
 
