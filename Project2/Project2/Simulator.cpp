@@ -93,7 +93,6 @@ void Simulator::runJtype(){
 
 void Simulator::runLoadInstr(){
     //TODO::Test Load Instr
-    //Step 3:
     setAoe(1);
     setIRoeS2(1);
     setS2op(3);
