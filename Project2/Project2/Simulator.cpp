@@ -128,7 +128,7 @@ void Simulator::runStoreInstr(){
     switch(opcode){
         case 40: setMemOP(2); break;
         case 41: setMemOP(1); break;
-        case 42: setMemOP(0); break;
+        case 43: setMemOP(0); break;
         default: break;
     }
     setMemWrite(1);
