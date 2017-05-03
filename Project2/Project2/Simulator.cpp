@@ -183,7 +183,7 @@ void Simulator::setIRload(bool load){
         rs2 = (ir & 0x001F0000) >> 16;
         imm = (ir & 0x0000FFFF);
         offset = (ir & 0x03FFFFFF);
-        opcode = ir >> 26;
+        opcode = (ir >> 26) & 0x0000003F;
         opcodeALU = ir & 0x000007FF;
     }
 }
