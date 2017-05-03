@@ -115,8 +115,25 @@ void Simulator::runLoadInstr(){
 }
 
 void Simulator::runStoreInstr(){
-    //TODO::Code for store instructions
-    
+    //TODO::Test Store Instructions
+    setAoe(1);
+    setIRoeS2(1);
+    setS2op(3);
+    setALUop(0);
+    setMARload(1);
+    setBoe(1);
+    setS2op(0);
+    setALUop(3);
+    setMemRead(1);
+    setMDRload(1);
+    setPCMARselect(1);
+    switch(opcode){
+        case 40: setMemOP(2); break;
+        case 41: setMemOP(1); break;
+        case 42: setMemOP(0); break;
+        default: break;
+    }
+    setMemWrite(1);
 }
 
 void Simulator::runItypeALU(){
