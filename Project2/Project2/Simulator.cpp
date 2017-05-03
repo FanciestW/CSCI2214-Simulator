@@ -26,9 +26,7 @@ void Simulator::run(){
                 runItypeALU(); break;
                 break;
             case 5: runLoadInstr(); break;
-            case 6:
-                //store
-                break;
+            case 6: runStoreInstr(); break;
             default:
                 fatal("Bad opcode");
                 break;
@@ -118,6 +116,7 @@ void Simulator::runLoadInstr(){
 
 void Simulator::runStoreInstr(){
     //TODO::Code for store instructions
+    
 }
 
 void Simulator::runItypeALU(){
