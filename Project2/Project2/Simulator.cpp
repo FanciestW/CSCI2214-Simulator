@@ -218,8 +218,8 @@ void Simulator::setALUop(int op){
         case 4: dest = s1 & s2; break;
         case 5: dest = s1 | s2; break;
         case 6: dest = s1 ^ s2; break;
-        case 8: dest = s1  << (s2 % 8); break;
-        case 10: dest = s1 >> (s2 % 8); break;
+        case 8: dest = s1  << s2; break;
+        case 10: dest = s1 >> s2; break;
         case 16: dest = (s1 == s2); break;
         case 18: dest = (s1 != s2); break;
         case 20: dest = (s1 < s2); break;
