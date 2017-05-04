@@ -31,7 +31,7 @@ void Simulator::run(){
 
 void Simulator::step1(){
     setPCMARselect(0);
-    readMem(1, 0);
+    readMem(1, 0, 0);
     setIRload(1);
 }
 
@@ -99,9 +99,9 @@ void Simulator::runLoadInstr(){
     setMARload(1);
     setPCMARselect(1);
     switch(opcode){
-        case 32: readMem(1, 2); break;
-        case 33: readMem(1, 1); break;
-        case 35: readMem(1, 0); break;
+        case 32: readMem(1, 1, 2); break;
+        case 33: readMem(1, 1, 1); break;
+        case 35: readMem(1, 1, 0); break;
     }
     setMDRload(1);
     setMDRoeS2(1);
@@ -174,9 +174,9 @@ void Simulator::setPCMARselect(bool pcmar){
     else addr = pc;
 }
 
-void Simulator::readMem(bool read, int op){
+void Simulator::readMem(bool read, bool readData, int op){
     if(read){
-        if(opcode >= 32 && opcode <= 37) addr += 3000;
+        if(readData) addr += 3000;
         MemRead = 1;
         data = mem.readMemory(addr, op);
         setMemRead(1);

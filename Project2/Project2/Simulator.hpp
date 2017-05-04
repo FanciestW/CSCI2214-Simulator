@@ -60,7 +60,7 @@ private:
     
     //Control Signal Functions
     void setPCMARselect(bool);
-    void readMem(bool, int);
+    void readMem(bool, bool, int);
     void setIRload(bool);
     void setPCoeS1(bool oe){ if(oe) s1 = pc; }
     void setS2op(int);
