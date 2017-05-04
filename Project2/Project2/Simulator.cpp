@@ -252,6 +252,7 @@ void Simulator::setALUop(int op){
         default: fatal("Bad ALUop"); break;
     }
     if(dest == 0) Zflag = true;
+    else Zflag = false;
 }
 
 //Designate where DMX will store C
