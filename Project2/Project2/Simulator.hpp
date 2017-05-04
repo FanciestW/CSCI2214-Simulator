@@ -88,6 +88,7 @@ private:
     void step2();
     void runRtype();
     void runJtype();
+    void runJItype();
     void runLoadInstr();
     void runStoreInstr();
     void runItypeALU();
