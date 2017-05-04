@@ -17,11 +17,9 @@ void Simulator::run(){
             case 0: runRtype(); break; //Handles All R types;
             case 1: runJtype(); break;
             case 2:
-                //runItypeJ()
+                runJItype();
                 break;
-            case 3:
-                runBranchInstr();
-                break;
+            case 3: runBranchInstr(); break;
             case 4: runItypeALU(); break;
             case 5: runLoadInstr(); break;
             case 6: runStoreInstr(); break;
@@ -85,6 +83,10 @@ void Simulator::runJtype(){
     setS2op(5);
     setALUop(0);
     setPCload(1);
+}
+
+void Simulator::runJItype(){
+    //TODO::Code J Itype instructions
 }
 
 void Simulator::runLoadInstr(){
@@ -154,7 +156,6 @@ void Simulator::runItypeALU(){
 }
 
 void Simulator::runBranchInstr(){
-    //TODO::Test Branch Instr
     setAoe(1);
     setS2op(0);
     setALUop(2);
