@@ -176,6 +176,7 @@ void Simulator::setPCMARselect(bool pcmar){
 
 void Simulator::readMem(bool read, int op){
     if(read){
+        if(opcode >= 32 && opcode <= 37) addr += 3000;
         MemRead = 1;
         data = mem.readMemory(addr, op);
         setMemRead(1);
