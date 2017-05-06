@@ -16,9 +16,7 @@ void Simulator::run(){
         switch(getInstrType(opcode)){
             case 0: runRtype(); break; //Handles All R types;
             case 1: runJtype(); break;
-            case 2:
-                runJItype();
-                break;
+            case 2: runJItype(); break;
             case 3: runBranchInstr(); break;
             case 4: runItypeALU(); break;
             case 5: runLoadInstr(); break;
