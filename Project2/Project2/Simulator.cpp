@@ -276,6 +276,7 @@ void Simulator::printStateHex(){
     cout << string(80, '=') << endl;
 }
 
+//TODO::Make a print statement a combination of hex and decimal
 //Print to console the state of Simulator in Decimal
 void Simulator::printStateDec(){
     printf("Register File:\n");
