@@ -279,6 +279,7 @@ void Simulator::printStateHex(){
 //TODO::Make a print statement a combination of hex and decimal
 //Print to console the state of Simulator in Decimal
 void Simulator::printStateDec(){
+    cout << string(80, '=') << endl;
     printf("Register File:\n");
     for(int i = 0; i < 32; i++) printf("R%i: %i ", i, registers[i]);
     printf("\nMemory Registers:\n");
