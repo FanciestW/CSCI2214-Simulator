@@ -104,6 +104,7 @@ public:
     void writeToMem(int addr, unsigned int data, int WHB){ mem.writeMemory(addr + 3000, data, WHB); }
     void printStateHex();
     void printStateDec();
+    void printStatePretty();
     
 };
 
