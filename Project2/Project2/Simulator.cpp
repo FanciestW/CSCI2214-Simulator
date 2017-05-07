@@ -8,7 +8,7 @@
 
 #include "Simulator.hpp"
 
-void Simulator::run(){
+void Simulator::run(bool step){
     for(;;){
         step1();
         if(ir == 0) break;
@@ -24,6 +24,7 @@ void Simulator::run(){
             default: fatal("Bad opcode"); break;
         }
         printStatePretty();
+        if(step) cout << "Press [ENTER] to continue..."; getchar();
     }
 }
 

@@ -13,4 +13,5 @@ int main(int argc, const char * argv[]) {
     sim.loadCode("input.txt");
     sim.run();
     cout << "Complete" << endl;
+    sim.run(1);
 }
