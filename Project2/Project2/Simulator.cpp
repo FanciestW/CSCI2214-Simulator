@@ -287,6 +287,9 @@ void Simulator::printStateDec(){
     printf("\nPC: %i\nData Bus:\n", pc);
     printf("S1: %i S2: %i Dest: %i Addr: %i Data: %i\n", s1, s2, dest, addr, data);
     printf("Register Buffers:\nA: %i B: %i C: %i\n", a, b, c);
+    cout << string(80, '=') << endl;
+}
+
 }
 
 //return 0: Rtype; 1: J type; 2: Itype J 3: Branch; 4: Itype ALU; 5: load; 6: store; -1: no such op
