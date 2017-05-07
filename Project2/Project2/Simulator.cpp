@@ -23,7 +23,7 @@ void Simulator::run(){
             case 6: runStoreInstr(); break;
             default: fatal("Bad opcode"); break;
         }
-        printStateHex();
+        printStatePretty();
     }
 }
 
@@ -276,7 +276,6 @@ void Simulator::printStateHex(){
     cout << string(80, '=') << endl;
 }
 
-//TODO::Make a print statement a combination of hex and decimal
 //Print to console the state of Simulator in Decimal
 void Simulator::printStateDec(){
     cout << string(80, '=') << endl;
@@ -291,6 +290,18 @@ void Simulator::printStateDec(){
     cout << string(80, '=') << endl;
 }
 
+//Print to console the state of Simulator in a mix of Hex and Dec
+void Simulator::printStatePretty(){
+    cout << string(80, '=') << endl;
+    printf("Register File:\n");
+    for(int i = 0; i < 32; i++) printf("R%i: %i ", i, registers[i]);
+    printf("\nMemory Registers:\n");
+    printf("MDR: %i MAR: %i\nHardware Registers:\n", mdr, mar);
+    printf("IR: 0x%08X ", ir);
+    printf("\nPC: %i\nData Bus:\n", pc);
+    printf("S1: %i S2: %i Dest: %i Addr: %i Data: %i\n", s1, s2, dest, addr, data);
+    printf("Register Buffers:\nA: %i B: %i C: %i\n", a, b, c);
+    cout << string(80, '=') << endl;
 }
 
 //return 0: Rtype; 1: J type; 2: Itype J 3: Branch; 4: Itype ALU; 5: load; 6: store; -1: no such op
