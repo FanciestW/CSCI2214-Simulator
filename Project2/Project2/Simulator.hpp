@@ -84,6 +84,7 @@ private:
     void setMemWrite(bool);
     
     //Running Simulator Functions
+    int getInstrType(int);
     void step1();
     void step2();
     void runRtype();
@@ -103,7 +104,6 @@ public:
     void writeToMem(int addr, unsigned int data, int WHB){ mem.writeMemory(addr + 3000, data, WHB); }
     void printStateHex();
     void printStateDec();
-    int getInstrType(int);
     
 };
 
