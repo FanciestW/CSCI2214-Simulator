@@ -89,7 +89,6 @@ void Simulator::runJItype(){
 }
 
 void Simulator::runLoadInstr(){
-    //TODO::Test Load Instr
     setAoe(1);
     setIRoeS2(1);
     if(opcode == 36 || opcode == 37) setS2op(4);
