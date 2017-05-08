@@ -101,7 +101,6 @@ public:
     Simulator(){}
     void run(bool);
     void loadCode(string file){ mem.loadProgramCode(file); }
-    void writeToMem(int addr, unsigned int data, int WHB){ mem.writeMemory(addr + 3000, data, WHB); }
     void printStateHex();
     void printStateDec();
     void printStatePretty();
