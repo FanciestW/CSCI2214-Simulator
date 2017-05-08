@@ -178,7 +178,7 @@ void Simulator::readMem(bool read, bool readData, int op){
         MemRead = 1;
         data = mem.readMemory(addr, op);
         setMemRead(1);
-    }
+    } else MemRead = 0;
 }
 
 void Simulator::setMemWrite(bool write){
