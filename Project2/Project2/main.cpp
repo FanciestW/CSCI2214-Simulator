@@ -10,7 +10,7 @@
 
 int main(int argc, const char * argv[]) {
     Simulator sim;
-    sim.loadCode("test2.txt");
-    sim.run(0);
+    sim.loadCode(argv[1]);
+    sim.run(stoi(argv[2]));
     cout << "Simulation Complete" << endl;
 }
