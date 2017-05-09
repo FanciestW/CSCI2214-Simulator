@@ -34,6 +34,8 @@
 		D1AEAFA91EA003B6006C9F92 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D1AEAFB01EA0079F006C9F92 /* tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tools.cpp; sourceTree = "<group>"; };
 		D1AEAFB11EA0079F006C9F92 /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tools.hpp; sourceTree = "<group>"; };
+		D1F65A271EC273C900ECE0FD /* output1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output1.txt; sourceTree = "<group>"; };
+		D1F65A281EC273DB00ECE0FD /* output2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = output2.txt; sourceTree = "<group>"; };
 		D1FFDF9E1EA941F700598189 /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
 		D1FFDF9F1EA941F700598189 /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Simulator.hpp; sourceTree = "<group>"; };
 		D1FFDFA11EA9447B00598189 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 				D1AEAFB11EA0079F006C9F92 /* tools.hpp */,
 				D1AEAFA91EA003B6006C9F92 /* main.cpp */,
 				D1FFDF9E1EA941F700598189 /* Simulator.cpp */,
+				D1F65A271EC273C900ECE0FD /* output1.txt */,
+				D1F65A281EC273DB00ECE0FD /* output2.txt */,
 				D1FFDF9F1EA941F700598189 /* Simulator.hpp */,
 				D13C010F1EAFD64E0052D051 /* MainMemory.cpp */,
 				D13C01101EAFD64E0052D051 /* MainMemory.hpp */,
