@@ -24,7 +24,10 @@ void Simulator::run(bool step){
             default: fatal("Bad opcode"); break;
         }
         printStatePretty();
-        if(step) cout << "Press [ENTER] to continue..."; getchar();
+        if(step){
+            cout << "Press [ENTER] to continue...";
+            getchar();
+        }
     }
 }
 
