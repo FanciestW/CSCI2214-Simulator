@@ -11,6 +11,6 @@
 int main(int argc, const char * argv[]) {
     Simulator sim;
     sim.loadCode("test2.txt");
-    sim.run(1);
+    sim.run(0);
     cout << "Simulation Complete" << endl;
 }
